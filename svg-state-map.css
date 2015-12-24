@@ -1,0 +1,89 @@
+.svg-sm-map-wrap {
+	height: 0;
+	position: relative;
+	width: 100%;
+}
+
+.svg-sm-vector-map {
+	cursor: pointer;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.svg-sm-vector-map path {
+	/*fill: transparent;*/
+	transition: fill, .15s;
+
+}
+.svg-sm-vector-map path.highlight-county {
+	fill: #555;
+}
+
+.svg-sm-vector-map .county-labels-container {
+	position: absolute;
+	z-index: 999;
+	pointer-events: none;
+}
+
+.svg-sm-vector-map .county-label {
+	background: rgba(255,255,255, .75);
+	display: block;
+	font-size: .8em;
+	font-weight: bold;
+	padding: 5px 10px;
+	text-align: center;
+	text-transform: uppercase;
+	pointer-events: none;
+	line-height: 1.1em;
+}
+
+/* loader anim */
+.mask-loading {
+	background-color: rgba(255, 255, 255, .25);
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	z-index: 999;
+	top: 0;
+	left: 0;
+}
+.spinner {
+	height: 50px;
+	margin: -25px auto 0;
+	position: relative;
+	top: 50%;
+	width: 50px;
+}
+
+.double-bounce1,
+.double-bounce2 {
+	-webkit-animation: sk-bounce 2s infinite ease-in-out;
+	animation: sk-bounce 2s infinite ease-in-out;
+	background-color: #fff;
+	border-radius: 50%;
+	height: 100%;
+	left: 0;
+	opacity: .6;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.double-bounce2 {
+	-webkit-animation-delay: -1s;
+	animation-delay: -1s;
+}
+
+@-webkit-keyframes sk-bounce {
+	0%, 100% { -webkit-transform: scale(0); transform: scale(0); }
+	50% { -webkit-transform: scale(1); transform: scale(1) }
+}
+
+@keyframes sk-bounce {
+	0%, 100% { -webkit-transform: scale(0); transform: scale(0); }
+	50% { -webkit-transform: scale(1); transform: scale(1) }
+}
+
